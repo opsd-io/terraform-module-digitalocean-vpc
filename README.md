@@ -31,11 +31,14 @@ module "module_name" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.7.4 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | 2.34.1 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | 2.34.1 |
 
 ## Modules
 
@@ -43,15 +46,27 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [digitalocean_vpc.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/vpc) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A map of tags to assign to every resource in this module. | `map(string)` | `{}` | no |
+| <a name="input_description"></a> [description](#input\_description) | VPC description | `string` | `null` | no |
+| <a name="input_do_token"></a> [do\_token](#input\_do\_token) | n/a | `any` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | VPC networks can only contain resources that are in the same datacenter region. | `string` | `{}` | no |
+| <a name="input_vpc_ip_range"></a> [vpc\_ip\_range](#input\_vpc\_ip\_range) | Resources created in this VPC will be assigned a private IP for secure communication within the specified range. | `string` | n/a | yes |
+| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | VPC name | `string` | `{}` | no |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_id"></a> [id](#output\_id) | The unique identifier for the VPC. |
+| <a name="output_urn"></a> [urn](#output\_urn) | The uniform resource name (URN) for the VPC. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage
