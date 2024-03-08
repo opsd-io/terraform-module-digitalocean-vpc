@@ -8,7 +8,7 @@ variable "vpc_name" {
 variable "vpc_ip_range" {
   description = "Resources created in this VPC will be assigned a private IP for secure communication within the specified range."
   type        = string
-  sensitive   = true
+
 }
 
 variable "region" {
@@ -17,7 +17,12 @@ variable "region" {
   default     = null
 }
 variable "do_token" {
-  description = "value"
+  description = "value of your do token"
+  type        = string
+
+}
+variable "description" {
+  description = "description of your VPC"
   type        = string
 
 }

@@ -55,7 +55,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_do_token"></a> [do\_token](#input\_do\_token) | value | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | description of your VPC | `string` | n/a | yes |
+| <a name="input_do_token"></a> [do\_token](#input\_do\_token) | value of your do token | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | VPC networks can only contain resources that are in the same datacenter region. | `string` | `null` | no |
 | <a name="input_vpc_ip_range"></a> [vpc\_ip\_range](#input\_vpc\_ip\_range) | Resources created in this VPC will be assigned a private IP for secure communication within the specified range. | `string` | n/a | yes |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | VPC name | `string` | `null` | no |
@@ -65,6 +66,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | The unique identifier for the VPC. |
+| <a name="output_ip_range"></a> [ip\_range](#output\_ip\_range) | The uniform resource name (URN) for the VPC. |
 | <a name="output_urn"></a> [urn](#output\_urn) | The uniform resource name (URN) for the VPC. |
 <!-- END_TF_DOCS -->
 
