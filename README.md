@@ -32,13 +32,13 @@ module "module_name" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.7.4 |
-| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | 2.34.1 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.0.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | 2.34.1 |
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.0.0 |
 
 ## Modules
 
@@ -48,7 +48,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [digitalocean_vpc.main](https://registry.terraform.io/providers/digitalocean/digitalocean/2.34.1/docs/resources/vpc) | resource |
+| [digitalocean_vpc.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/vpc) | resource |
 
 ## Inputs
 
