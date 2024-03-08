@@ -16,11 +16,12 @@ What does the module provide?
 
 ```hcl
 module "module_name" {
-  source  = "github.com/opsd-io/module_name?ref=v0.0.1"
+  source  = "github.com/opsd-io/terraform-module-digitalocean-vpc"
 
   # Variables
-  variable_1 = "foo"
-  variable_2 = "bar"
+  name     = "your-vpc"
+  region   = "nyc3"
+  ip_range = "192.168.0.0/24"
 }
 ```
 
