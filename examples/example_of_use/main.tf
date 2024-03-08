@@ -6,3 +6,8 @@ module "terraform-module-digitalocean-vpc" {
   description = "Vpc added by terraform module"
 
 }
+
+# Configure the DigitalOcean Provider
+provider "digitalocean" {
+  token = var.do_token
+}
