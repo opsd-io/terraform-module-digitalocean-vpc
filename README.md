@@ -19,9 +19,10 @@ module "module_name" {
   source  = "github.com/opsd-io/terraform-module-digitalocean-vpc"
 
   # Variables
-  name     = "your-vpc"
-  region   = "nyc3"
-  ip_range = "192.168.0.0/24"
+  name        = "your-vpc"
+  region      = "nyc3"
+  ip_range    = "192.168.0.0/24"
+  description = "VPC added by terraform module"
 }
 ```
 
@@ -55,10 +56,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_description"></a> [description](#input\_description) | Description of your VPC | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | Description of your VPC. | `string` | n/a | yes |
+| <a name="input_ip_range"></a> [ip\_range](#input\_ip\_range) | Resources created in this VPC will be assigned a private IP for secure communication within the specified range. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | VPC networks can only contain resources that are in the same datacenter region. Required | `string` | n/a | yes |
-| <a name="input_vpc_ip_range"></a> [vpc\_ip\_range](#input\_vpc\_ip\_range) | Resources created in this VPC will be assigned a private IP for secure communication within the specified range. | `string` | n/a | yes |
-| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | A name for the VPC. Must be unique and contain alphanumeric characters, dashes, and periods only. Required | `string` | n/a | yes |
+| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | A name for the VPC. Must be unique and contain alphanumeric characters, dashes, and periods only. | `string` | n/a | yes |
 
 ## Outputs
 
