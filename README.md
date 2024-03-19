@@ -16,11 +16,13 @@ What does the module provide?
 
 ```hcl
 module "module_name" {
-  source  = "github.com/opsd-io/module_name?ref=v0.0.1"
+  source  = "github.com/opsd-io/terraform-module-digitalocean-vpc"
 
   # Variables
-  variable_1 = "foo"
-  variable_2 = "bar"
+  name        = "your-vpc"
+  region      = "nyc3"
+  ip_range    = "192.168.0.0/24"
+  description = "VPC added by terraform module"
 }
 ```
 
@@ -31,11 +33,14 @@ module "module_name" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.7.4 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.0.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.0.0 |
 
 ## Modules
 
@@ -43,15 +48,26 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [digitalocean_vpc.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/vpc) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_description"></a> [description](#input\_description) | Description of your VPC. | `string` | n/a | yes |
+| <a name="input_ip_range"></a> [ip\_range](#input\_ip\_range) | Resources created in this VPC will be assigned a private IP for secure communication within the specified range. | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | VPC networks can only contain resources that are in the same datacenter region. Required | `string` | n/a | yes |
+| <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | A name for the VPC. Must be unique and contain alphanumeric characters, dashes, and periods only. | `string` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_default"></a> [default](#output\_default) | Description: A boolean indicating whether or not the VPC is the default one for the region. |
+| <a name="output_id"></a> [id](#output\_id) | The unique identifier for the VPC. |
+| <a name="output_urn"></a> [urn](#output\_urn) | The uniform resource name (URN) for the VPC. |
 <!-- END_TF_DOCS -->
 
 ## Examples of usage
