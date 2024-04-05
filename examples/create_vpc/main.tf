@@ -4,10 +4,4 @@ module "example_vpc" {
   region      = "nyc3"
   ip_range    = "192.168.0.0/24"
   description = "VPC added by terraform module"
-
-}
-
-# Configure the DigitalOcean Provider
-provider "digitalocean" {
-  token = var.do_token
 }
