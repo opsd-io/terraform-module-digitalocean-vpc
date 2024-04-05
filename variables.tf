@@ -3,16 +3,20 @@ variable "vpc_name" {
   type        = string
   nullable    = false
 }
+
 variable "ip_range" {
   description = "Resources created in this VPC will be assigned a private IP for secure communication within the specified range."
   type        = string
 }
+
 variable "region" {
-  description = "VPC networks can only contain resources that are in the same datacenter region. Required"
+  description = "VPC networks can only contain resources that are in the same datacenter region."
   type        = string
   nullable    = false
 }
+
 variable "description" {
   description = "Description of your VPC."
   type        = string
+  default     = null
 }
