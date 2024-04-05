@@ -65,7 +65,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_default"></a> [default](#output\_default) | Description: A boolean indicating whether or not the VPC is the default one for the region. |
+| <a name="output_default"></a> [default](#output\_default) | A boolean indicating whether or not the VPC is the default one for the region. |
 | <a name="output_id"></a> [id](#output\_id) | The unique identifier for the VPC. |
 | <a name="output_urn"></a> [urn](#output\_urn) | The uniform resource name (URN) for the VPC. |
 <!-- END_TF_DOCS -->

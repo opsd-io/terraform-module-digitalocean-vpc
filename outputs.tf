@@ -9,6 +9,6 @@ output "urn" {
 }
 
 output "default" {
-  description = "Description: A boolean indicating whether or not the VPC is the default one for the region."
+  description = "A boolean indicating whether or not the VPC is the default one for the region."
   value       = digitalocean_vpc.main.default
 }
