@@ -67,6 +67,9 @@ No modules.
 |------|-------------|
 | <a name="output_default"></a> [default](#output\_default) | A boolean indicating whether or not the VPC is the default one for the region. |
 | <a name="output_id"></a> [id](#output\_id) | The unique identifier for the VPC. |
+| <a name="output_ip_range"></a> [ip\_range](#output\_ip\_range) | The range of IP addresses in the VPC in CIDR notation. |
+| <a name="output_name"></a> [name](#output\_name) | The name of the VPC. |
+| <a name="output_region"></a> [region](#output\_region) | The region slug for the VPC's location. |
 | <a name="output_urn"></a> [urn](#output\_urn) | The uniform resource name (URN) for the VPC. |
 <!-- END_TF_DOCS -->
 
