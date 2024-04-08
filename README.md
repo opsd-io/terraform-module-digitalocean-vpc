@@ -33,14 +33,14 @@ module "module_name" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.7 |
-| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.0.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.5 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.17.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.0.0 |
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.17.0 |
 
 ## Modules
 
@@ -56,17 +56,20 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_description"></a> [description](#input\_description) | Description of your VPC. | `string` | n/a | yes |
+| <a name="input_description"></a> [description](#input\_description) | Description of your VPC. | `string` | `null` | no |
 | <a name="input_ip_range"></a> [ip\_range](#input\_ip\_range) | Resources created in this VPC will be assigned a private IP for secure communication within the specified range. | `string` | n/a | yes |
-| <a name="input_region"></a> [region](#input\_region) | VPC networks can only contain resources that are in the same datacenter region. Required | `string` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | VPC networks can only contain resources that are in the same datacenter region. | `string` | n/a | yes |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | A name for the VPC. Must be unique and contain alphanumeric characters, dashes, and periods only. | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_default"></a> [default](#output\_default) | Description: A boolean indicating whether or not the VPC is the default one for the region. |
+| <a name="output_default"></a> [default](#output\_default) | A boolean indicating whether or not the VPC is the default one for the region. |
 | <a name="output_id"></a> [id](#output\_id) | The unique identifier for the VPC. |
+| <a name="output_ip_range"></a> [ip\_range](#output\_ip\_range) | The range of IP addresses in the VPC in CIDR notation. |
+| <a name="output_name"></a> [name](#output\_name) | The name of the VPC. |
+| <a name="output_region"></a> [region](#output\_region) | The region slug for the VPC's location. |
 | <a name="output_urn"></a> [urn](#output\_urn) | The uniform resource name (URN) for the VPC. |
 <!-- END_TF_DOCS -->
 
