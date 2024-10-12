@@ -20,3 +20,9 @@ variable "description" {
   type        = string
   default     = null
 }
+
+variable "delete_timeout" {
+  description = "Custom timeout to avoid `Can not delete VPC with members` issue."
+  type        = string
+  default     = "10m"
+}
