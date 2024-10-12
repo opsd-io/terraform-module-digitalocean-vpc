@@ -56,6 +56,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_delete_timeout"></a> [delete\_timeout](#input\_delete\_timeout) | Custom timeout to avoid `Can not delete VPC with members` issue. | `string` | `"10m"` | no |
 | <a name="input_description"></a> [description](#input\_description) | Description of your VPC. | `string` | `null` | no |
 | <a name="input_ip_range"></a> [ip\_range](#input\_ip\_range) | Resources created in this VPC will be assigned a private IP for secure communication within the specified range. | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | VPC networks can only contain resources that are in the same datacenter region. | `string` | n/a | yes |
