@@ -14,4 +14,9 @@ resource "digitalocean_vpc" "main" {
   region      = var.region
   ip_range    = var.ip_range
   description = var.description
+
+  timeouts {
+    delete = var.delete_timeout
+  }
+
 }
